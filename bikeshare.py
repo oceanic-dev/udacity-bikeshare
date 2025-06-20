@@ -16,17 +16,16 @@ PATH = '/Users/jessetownsend/Documents/Udacity/datascience_withpython/Mod4-Git/u
 def city_filter(PATH):
     """Prompts the user to select a city dataset and loads the corresponding CSV file."""
     # Define valid city codes and their full names
-    CITIES = ['CH', 'NY', 'WS']
-    CITY_NAMES = {'CH': 'Chicago', 'NY': 'New York', 'WS': 'Washington'}
+    city_names = {'CH': 'Chicago', 'NY': 'New York', 'WS': 'Washington'}
 
     # Loop until a valid city code is provided
     while True:
         user_city = input('CH - Chicago\n'
                           'NY - New York\n'
                           'WS - Washington DC\n'
-                          'Which dataset do you want to use [CH, NY, WS]: ').upper()
+                          'Which dataset do you want to use [CH, NY, WS]: ').strip().upper()
         
-        if user_city in CITIES:
+        if user_city in city_names:
             break  # Exit the loop if a valid city code is provided
         
         print("*** Invalid Input - only [CH, NY, WS] ***")
@@ -35,9 +34,9 @@ def city_filter(PATH):
     try: 
         df = pd.read_csv(f"{PATH}{CITY_DATA[user_city]}")
     except Exception as e: 
-        print(f'*** CSV Import Failed - {e.message()} ***')
+        print(f'*** CSV Import Failed - {e} ***')
     else:
-        print(f'--- Imported {CITY_NAMES[user_city]} City Data ---')
+        print(f'--- Imported {city_names[user_city]} City Data ---')
         return df
 
 def time_stats(df):
