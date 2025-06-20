@@ -20,7 +20,7 @@ This project analyzes bikeshare data from three major US cities: Chicago, New Yo
 ## Getting Started
 1. Clone this repository
 2. Ensure Python 3.x is installed
-3. Update the `PATH` variable in `bikeshare.py` to match the local directory of the CSV files
+3. Update the `PATH` variable in `bikeshare.py` to match the local directory of the CSV files.
 4. Run `python bikeshare.py`
 5. Follow the interactive prompts
 
@@ -38,6 +38,16 @@ Or using the requirements.txt file:
 ```bash
 pip install -r requirements.txt
 ```
+
+## Contributing
+We welcome contributions from other developers! If you have ideas for additional statistical methods or analyses that could provide more insights into the bikeshare dataset, please feel free to submit a pull request. Examples include new summary statistics and advanced visualizations.
+
+When contributing:
+- Please ensure your code is well-documented and tested.
+- Add clear explanations of any new methods or metrics.
+- Update the documentation and usage examples as needed.
+
+Let’s work together to make this project a comprehensive resource for bikeshare data analysis!
 
 ### Credits
 The code demo for the Bikeshare Project, given by the Udacity Instructors, can be viewed on [YouTube](https://www.youtube.com/watch?v=--81WEZH6TQ). The inspiration that help craft my approach to the project (beyond the demo) stemmed from the retro terminal interface like that found in MS-DOS from the 80s.
