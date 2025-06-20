@@ -209,7 +209,7 @@ def filter_by_day_of_week(df):
     filtered_df = df[df['Start Day'] == day]
     return filtered_df
 
-def main():
+def main(PATH):
     """Main function to run the bikeshare statistics terminal interface."""
     # Define valid menu options
     answers = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12')
@@ -222,7 +222,7 @@ def main():
     # Main loop to keep the terminal active
     while activeTerminal:
         # Load the dataset for the selected city
-        no_filter_df = city_filter()
+        no_filter_df = city_filter(PATH)
 
         if no_filter_df is not None:
             # Convert Start Time and End Time to datetime format
@@ -367,4 +367,4 @@ def main():
 
 # Entry point for the script
 if __name__ == "__main__":
-    main()
+    main(PATH)
